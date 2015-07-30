@@ -27,7 +27,7 @@
 		#include "SD.h"
 	#endif
 	#ifndef WiFiSDCoopLib_COOP_SD_CHUNK
-		#define WiFiSDCoopLib_COOP_SD_CHUNK 64
+		#define WiFiSDCoopLib_COOP_SD_CHUNK 128
 	#endif
 
 	#ifdef _VARIANT_ARDUINO_STM32_
@@ -188,6 +188,9 @@
 			_cleanWorkQueue();
 		  	WiFiSDCoopLib_DEV.begin(WiFiSDCoopLib_BAUDS);
 			_send(F("AT+RST"), 1500, false, WiFiSDCoopLib_RESPONSE_RESET); // RST produces an "OK" that returns from command _send but still has to reset.
+			delay(1000);
+			_send(F("AT"), 100); // To avoid a after-reset bug in new firm
+			delay(1000);
 			_sendPart(F("AT+CWMODE="));
 			_send(String(mode), 300);
 			if (mode != '1') { // Configure AP
@@ -252,7 +255,9 @@
 			}
 			if (type != WiFiSDCoopLib_RESPONSE_NO && timeout > 0) {
 				_checkESPAvailableData(timeout, &response, type); 
+				delay(150);
 			}
+Serial.println(response);
 			return response;
 		}
 
