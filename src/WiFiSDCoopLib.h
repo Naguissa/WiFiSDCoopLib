@@ -257,7 +257,7 @@
 				_checkESPAvailableData(timeout, &response, type); 
 				delay(150);
 			}
-Serial.println(response);
+// Serial.println(response);
 			return response;
 		}
 

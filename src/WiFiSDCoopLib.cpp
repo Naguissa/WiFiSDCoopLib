@@ -52,7 +52,7 @@ void WiFiSDCoopLib::setSSID(const String s) {
 	}
 	ssid = (char *) malloc((s.length() + 1) * sizeof(char));
 	s.toCharArray(ssid, s.length());
-	ssid[s.length()] = '\0';
+//	ssid[s.length()] = '\0';
 }
 
 void WiFiSDCoopLib::setSSID(const char s[]) {
@@ -61,7 +61,7 @@ void WiFiSDCoopLib::setSSID(const char s[]) {
 	}
 	ssid = (char *) malloc((strlen(s) + 1) * sizeof(char));
 	strcpy(ssid, s);
-	ssid[strlen(s)] = '\0';
+//	ssid[strlen(s)] = '\0';
 }
 
 void WiFiSDCoopLib::setPass(const String s) {
@@ -70,7 +70,7 @@ void WiFiSDCoopLib::setPass(const String s) {
 	}
 	pass = (char *) malloc((s.length() + 1) * sizeof(char));
 	s.toCharArray(pass, s.length());
-	pass[s.length()] = '\0';
+//	pass[s.length()] = '\0';
 }
 
 void WiFiSDCoopLib::setPass(const char s[]) {
@@ -79,7 +79,7 @@ void WiFiSDCoopLib::setPass(const char s[]) {
 	}
 	pass = (char *) malloc((strlen(s) + 1) * sizeof(char));
 	strcpy(pass, s);
-	pass[strlen(s)] = '\0';
+//	pass[strlen(s)] = '\0';
 }
 
 // Used for setting-up Wifi Module to desired speed.
