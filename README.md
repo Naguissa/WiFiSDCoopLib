@@ -46,3 +46,4 @@ If unmodified, example creates an open WiFi network with essid "default"
 
  * [Naguissa](https://github.com/Naguissa)
  * http://www.naguissa.com
+ * http://www.foroelectro.net
