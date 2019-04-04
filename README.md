@@ -47,3 +47,18 @@ If unmodified, example creates an open WiFi network with essid "default"
  * [Naguissa](https://github.com/Naguissa)
  * http://www.naguissa.com
  * http://www.foroelectro.net
+
+
+
+## Contribute ##
+
+Any code contribution, report or comment are always welcome. Don't hesitate to use GitHub for that.
+
+
+You can make a donation via PayPal: https://paypal.me/foroelectro
+
+
+Thanks for your support.
+
+
+Contributors hall of fame: https://www.foroelectro.net/hall-of-fame-f32/contributors-contribuyentes-t271.html
